@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SATS Transport</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link type="text/css" rel="stylesheet" href="scss/materialize.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <meta name="description" content="SATS Staff Transport Booking System">
+  <meta name="theme-color" content="#9e3039">
+  <meta property="og:image" content="./icons/icon-512.png">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json" />
+
+  <link rel="icon" type="image/png" href="icons/favicon-16x16" sizes="16x16">
+  <link rel="icon" type="image/png" href="icons/favicon-96.png" sizes="96x96">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" type="image/png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="SATS Transport">
+  <meta name="mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+
+  <!-- main nav -->
+  <nav>
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="index.html" class="brand-logo"><img src="images/sats-logo.png" alt="SATS logo" class="logo" /></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="index-trip.html">TRIP<i class="material-icons right">drive_eta</i></a>
+          </li>
+          <li>
+            <a href="#">LOGOUT<i class="material-icons right">logout</i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul class="sidenav" id="mobile-demo">
+    <li class="pad">
+      <a href="index.html" class="brand-logo"><img src="images/sats-logo-in.png" alt="SATS logo" /></a>
+    </li>
+    <div class="divider mt-1"></div>
+    <li>
+      <a href="index-trip.html">TRIP<i class="material-icons right">drive_eta</i></a>
+    </li>
+    <li>
+      <a href="index-trip-dual.html">LOGOUT<i class="small material-icons right">logout</i></a>
+    </li>
+  </ul>
+
+  <!-- pax contents -->
+  <div class="container">
+    <div class="row mt-1">
+      <div class="col s8">
+        <div class="title-wel">Welcome!</div>
+        <div class="title-name">Name Surname Alias</div>
+      </div>
+      <div class="col s4">
+        <div class="title-wel">Staff ID No.</div>
+        <div class="title-name">2234567899</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider mt-1"></div>
+
+  <!-- alert top -->
+<div class="container mt-1" id="alert">
+  <div class="row">
+    <div class="col s12 red lighten-1 white-text">
+      <div class="text-imp-bd">IMPORTANT !</div>
+      <a href="#!" class="btn right teal lighten-1 mt-1" id="alert-confirm">ok</a>
+      <div class="text-imp-1">NEW VEHICLE NO.:</div>
+      <div class="text-imp">SMC 8800 Z</div>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+  <!-- send home trip -->
+  <div class="container">
+    <div class="row mt-1">
+      <div class="col s12">
+        <div class="title-category">
+          TRIP DETAILS
+        </div>
+      </div>
+      <div class="col s6">
+        <div class="title-ref right">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- job 1 -->
+  <div class="container">
+    <div class="card-home z-depth-1">
+      <div class="row">
+        <div class="col s2">
+          <i class="material-icons teal-text icon-sz">home</i>
+        </div>
+        <div class="col s5">
+          <div class="title-dat-h">DATE</div>
+          <div class="title-dat-1">11 Jan 2023</div>
+
+        </div>
+        <div class="col s3">
+          <div class="title-dat-h">TIME </div>
+          <div class="title-dat-1">23:50</div>
+        </div>
+      </div>
+      <div class="divider mb1"></div>
+
+      <div class="row">
+        <div class="col s2"></div>
+        <div class="col s10">
+          <div class="title-dat-h">VEHICLE NO. </div>
+          <div class="title-dat-1">SMC 8800 Z</div>
+        </div>
+      </div>
+
+      <div class="divider mb1"></div>
+
+      <div class="row">
+        <div class="col s2"></div>
+        <div class="col s10">
+          <div class="title-dat-h">PICK UP </div>
+          <div class="title-dat-1">LCC 2</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s2"></div>
+        <div class="col s10">
+          <div class="title-dat-h">DROP OFF </div>
+          <div class="title-dat-1">68 Pasir Ris Round 2</div>
+          <div class="title-dat-1" id="postal_h_1">S443671</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+  <!-- small button modal starts -->
+
+<!-- Modal / pick up LCC 1-->
+    <div id="modal-pickup-lcc1" class="modal">
+      <div class="modal-content">
+        <p class="center h1">Arrived at LCC 1 Pickup</p>
+      </div>
+      <div class="modal-content center">
+        <a href="#!" class="modal-close waves-effect waves-red btn-large teal" id="btn-lcc1-up-confirm-1">CONFIRM</a>
+      </div>
+    </div>
+
+    <!-- Modal / pick up LCC 2-->
+    <div id="modal-pickup-lcc2" class="modal">
+      <div class="modal-content">
+        <p class="center h1">Arrived at LCC 2 Pickup</p>
+      </div>
+      <div class="modal-content center">
+        <a href="#!" class="modal-close waves-effect waves-red btn-large teal" id="btn-lcc2-up-confirm-1">CONFIRM</a>
+      </div>
+    </div>
+
+  <!-- Modal / pick up 1-->
+  <div id="modal-pickup-1" class="modal">
+    <div class="modal-content">
+      <p class="center h1">Arrived at Pickup</p>
+    </div>
+    <div class="modal-content center">
+      <a href="#!" class="modal-close waves-effect waves-red btn-large teal" id="btn-confirm-up-1">CONFIRM</a>
+    </div>
+  </div>
+
+  <!-- Modal / drop off confirm 1-->
+  <div id="modal-dropoff-1" class="modal">
+    <div class="modal-content">
+      <p class="center h1">Passenger alighted.</p>
+    </div>
+    <div class="modal-content center">
+      <a href="#!" class="modal-close waves-effect waves-red btn-large teal" id="btn-confirm-off-1">CONFIRM</a>
+    </div>
+  </div>
+
+  <!-- Modal / pick up confirm 2-->
+  <div id="modal-pickup-2" class="modal">
+    <div class="modal-content">
+      <p class="center h1">Passenger onboarded.</p>
+    </div>
+    <div class="modal-content center">
+      <a href="#!" class="modal-close waves-effect waves-red btn-large teal" id="btn-confirm-up-2">CONFIRM</a>
+    </div>
+  </div>
+
+  <!-- Modal / drop off confirm 2-->
+  <div id="modal-dropoff-2" class="modal">
+    <div class="modal-content">
+      <p class="center h1">Passenger alighted.</p>
+    </div>
+    <div class="modal-content center">
+      <a href="#!" class="modal-close waves-effect waves-red btn-large teal" id="btn-confirm-off-2">CONFIRM</a>
+    </div>
+  </div>
+
+  <!-- Modal pick up confirm 3-->
+  <div id="modal-pickup-3" class="modal">
+    <div class="modal-content">
+      <p class="center h1">Passenger onboarded.</p>
+    </div>
+    <div class="modal-content center">
+      <a href="#!" class="modal-close waves-effect waves-red btn-large teal" id="btn-confirm-up-3">CONFIRM</a>
+    </div>
+  </div>
+
+  <!-- Modal drop off confirm 3-->
+  <div id="modal-dropoff-3" class="modal">
+    <div class="modal-content">
+      <p class="center h1">Passenger alighted.</p>
+    </div>
+    <div class="modal-content center">
+      <a href="#!" class="modal-close waves-effect waves-red btn-large teal" id="btn-confirm-off-3">CONFIRM</a>
+    </div>
+  </div>
+
+  <!-- Modal completed job 1-->
+  <div id="modal-completed-1" class="modal">
+    <div class="modal-content">
+      <p class="center h1">Jobs completed. Thank you!</p>
+    </div>
+    <div class="modal-content center">
+      <a href="#!" class="modal-close waves-effect waves-red btn-large" id="btn-confirm-1">CONFIRM</a>
+    </div>
+  </div>
+
+  <!-- Modal completed job 2-->
+  <div id="modal-completed-2" class="modal">
+    <div class="modal-content">
+      <p class="center h1">Passenger has alighted.</p>
+    </div>
+    <div class="modal-content center">
+      <a href="#!" class="modal-close waves-effect waves-red btn-large" id="btn-confirm-2">CONFIRM</a>
+    </div>
+
+  </div>
+
+
+  <!-- Modal completed all jobs 3-->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <p class="center h1 teal-text fw-bold">All Jobs Completed. Thank you!</p>
+    </div>
+    <div class="modal-content center">
+      <a href="#!" class="modal-close waves-effect waves-red btn-large" id="modal-btn-3">CONFIRM</a>
+    </div>
+  </div>
+
+
+  <!-- footer -->
+  <footer>
+    <div class="container text-small">
+      <div class="footer">© 2023 SKETCH IT PTE LTD</div>
+    </div>
+  </footer>
+
+  <div></div>
+
+
+  <!-- notification messages -->
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background">
+        </div>
+      </div>
+    </li>
+    <li><a href="#!"><i class="material-icons">sms</i>MESSAGES</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li>
+      <div class="user-view">
+        <div class="pad-s">
+          <h5>NEW! DATE</h5>
+          <p>This is the new message.</p>
+        </div>
+        <div class="divider"></div>
+        <div class="pad-s">
+          <h5>NEW! DATE</h5>
+          <p>This is the new message.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <!-- custom js -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
